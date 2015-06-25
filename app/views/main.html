@@ -1,23 +1,31 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+
+<div class="row" ng-controller="TasksCtrl">
+<div class="col-md-12">
+<div class="row">
+  <div class="col-md-10">
+  <h2>Your Tasks</h2>
+      <div class="list-group" ng-repeat='task in tasks'>
+           <a class="list-group-item row">
+              <div class="col-md-9">
+                  <h4 class="list-group-item-heading">{{task.name}}</h4>
+                  <p class="list-group-item-text">{{task.description}}</p>
+              </div>
+          <div class="btn-group col-md-3 pull-right" role="group" aria-label="...">
+              <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span></button>
+              <button type="button" class="btn btn-danger" ng-click="deleteTask(task._id)"><span class="glyphicon glyphicon-remove"></span></button>
+          </div>
+      </a>
+
+     
+    </div>
+    </div>     
+  </div>  
+
+ <div class="row buttonRow">
+    <a class="addTask" href="/#/addTask"><button type="button" class="btn btn-success">Add Task <span class="glyphicon glyphicon-plus"></span></button></a>
+  </div>
+
+</div>
 </div>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-</div>

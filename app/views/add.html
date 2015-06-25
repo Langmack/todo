@@ -1,0 +1,32 @@
+<form ng-contoller="addCtrl">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Task Name</label>
+    <input ng-model="task.name" type="text" class="form-control" id="taskName" placeholder="Name">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Description</label>
+    <input ng-model="task.description" type="textarea" class="form-control" id="taskDesc" placeholder="Description">
+  </div>
+ 
+   <div class="checkbox">
+    <label>
+      <input ng-model="task.done" id="taskDone" type="checkbox" value='false'> Done?
+    </label>
+  </div>
+
+   <div class="form-group">
+    <label for="priority1">Priority</label>
+ <select ng-model="task.priority" id="priority1" class="form-control">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+</select>
+  </div>
+
+
+  	<div class="buttonRow">
+  	<button type="submit" ng-click="addTask()" class="btn btn-success">Add</button>
+	</div>
+</form>

@@ -30,11 +30,24 @@ body {
   padding-bottom: 19px;
 }
 
+.navLogo{
+  max-width: 150px;
+  max-height: 40px;
+}
+
 /* Custom page footer */
 .footer {
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
+}
+
+.addTask{
+  margin: 10px;
+}
+
+.buttonRow{
+  margin: 10px;
 }
 
 .container-narrow > hr {
@@ -57,6 +70,10 @@ body {
 }
 .marketing p + h4 {
   margin-top: 28px;
+}
+
+.navbar-nav > li > a {
+  line-height: 40px !important;
 }
 
 /* Responsive: Portrait tablets and up */
